@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.danger.LocateDangerApp.model.Location;
 
 @Repository
-public interface LocationRepo extends JpaRepository<Integer,Location> {
+public interface LocationRepo extends JpaRepository<Location,Integer> {
 
 }
