@@ -25,16 +25,16 @@ public class Location {
 	@Column(name= "description")
 	private String description;
 	
-	@Column(name = "messenger_name")
-	private String messengerName;
+	@Column(name = "reporterName")
+	private String reporterName;
 
-	public Location(Integer locationId, Double longitude, Double latitude, String description, String messengerName) {
+	public Location(Integer locationId, Double longitude, Double latitude, String description, String reporterName) {
 		super();
 		this.locationId = locationId;
 		this.longitude = longitude;
 		this.latitude = latitude;
 		this.description = description;
-		this.messengerName = messengerName;
+		this.reporterName = reporterName;
 	}
 
 	public Location() {
@@ -74,12 +74,12 @@ public class Location {
 		this.description = description;
 	}
 
-	public String getMessengerName() {
-		return messengerName;
+	public String getReporterName() {
+		return reporterName;
 	}
 
-	public void setMessengerName(String messengerName) {
-		this.messengerName = messengerName;
+	public void setReporterName(String reporterName) {
+		this.reporterName = reporterName;
 	}
 
 	@Override
@@ -90,7 +90,7 @@ public class Location {
 		result = prime * result + ((latitude == null) ? 0 : latitude.hashCode());
 		result = prime * result + ((locationId == null) ? 0 : locationId.hashCode());
 		result = prime * result + ((longitude == null) ? 0 : longitude.hashCode());
-		result = prime * result + ((messengerName == null) ? 0 : messengerName.hashCode());
+		result = prime * result + ((reporterName == null) ? 0 : reporterName.hashCode());
 		return result;
 	}
 
@@ -123,10 +123,10 @@ public class Location {
 				return false;
 		} else if (!longitude.equals(other.longitude))
 			return false;
-		if (messengerName == null) {
-			if (other.messengerName != null)
+		if (reporterName == null) {
+			if (other.reporterName != null)
 				return false;
-		} else if (!messengerName.equals(other.messengerName))
+		} else if (!reporterName.equals(other.reporterName))
 			return false;
 		return true;
 	}
@@ -134,9 +134,8 @@ public class Location {
 	@Override
 	public String toString() {
 		return "Location [locationId=" + locationId + ", longitude=" + longitude + ", latitude=" + latitude
-				+ ", description=" + description + ", messengerName=" + messengerName + "]";
-	}
-	
+				+ ", description=" + description + ", reporterName=" + reporterName + "]";
+	}	
 	
 	
 }
